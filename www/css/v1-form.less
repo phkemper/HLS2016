@@ -1,0 +1,76 @@
+/**
+ * Form and dialog rules.
+ */
+
+// FORMS
+// ----------------------------------------------------------------
+ 
+.form {
+	padding:@dim-margin;
+	border-radius:@dim-radius;
+	background-color:@clr-form-bkgnd;
+	box-shadow:@shd-form;
+}
+.ui-input-text input.error {
+	box-shadow:@shd-error;
+}
+.button {
+	border-radius:@dim-button;
+	background-color:@clr-blue;
+	border:1px solid lighten(@clr-blue,20%);
+	display:block;
+	min-height:3em;
+	line-height:3em;
+	padding:0 1em;
+	cursor:pointer;
+	text-align:center;
+	font-weight:bold;
+	&:hover {
+		background-color:lighten(@clr-blue,10%);
+		box-shadow:@shd-button-blue;
+	}
+}
+.ui-btn {
+	white-space:normal !important;
+	//text-align:left !important;
+}
+
+// DIALOG BOXES
+// ----------------------------------------------------------------
+.background {
+	position:relative;
+	z-index:10000;
+	height:100vh;
+	background-color:rgba(0,0,0,0.7);
+}
+.dialog {
+	position:relative;
+	display:inline-block;
+	width:60vw;
+	height:auto;
+	margin:30vh 10vw auto 10vw;
+	background-color:@clr-dialog-bkgnd;
+	box-shadow:@shd-dialog;
+	border-radius:@dim-radius;
+	padding:10vw;
+	color:@clr-white;
+	text-shadow:@shd-text-white;
+	.dialog-header {
+		margin:-10vw -10vw auto -10vw;
+		padding:5vw;
+		background-color:@clr-red;
+		border-radius:@dim-radius @dim-radius 0 0;
+		font-size:2em;
+		font-weight:bold;
+		text-align:center;
+	}
+	.dialog-message {
+		padding:@dim-margin 0;
+	}
+	.dialog-close {
+		
+	}
+}
+.dialog-error {
+	background-color:@clr-purple;
+}

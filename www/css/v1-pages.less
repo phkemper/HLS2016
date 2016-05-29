@@ -1,0 +1,587 @@
+/**
+ * Page specific rules.
+ */
+ 
+// GENERAL
+// -------------------------------------------------------------------
+html {
+	background: @clr-white url(../img/background.jpg) 0 0 no-repeat;
+	background-size:auto 100vh;
+	background-attachment:fixed;
+}
+body {
+	background-color:transparent !important;
+}
+h1 {
+	color:@clr-darkgrey;
+	font-size:120%;
+	text-shadow:@shd-title;
+	text-align:center;
+}
+h2 {
+	font-size:100%;
+}
+div[data-role='page'] {
+	position:relative;
+}
+.ui-page {
+	background-color:transparent;
+	padding-left:0;
+}
+.ui-content {
+	position:relative;
+	z-index:100;
+}
+#header-points,
+#header-notifications {
+	position:absolute;
+	z-index:2;
+	font-size:70%;
+	font-weight:normal;
+	display:inline-block;
+	top:6px;
+	left:50%;
+	background-color:transparent;
+	border:0;
+	.notify {
+		background-color:#f00;
+		padding:2px 5px;
+		border-radius:1em;
+		border:2px solid #fff;
+		box-shadow:2px 2px rgba(0,0,0,0.2);
+		cursor:pointer;
+	}
+}
+#header-points {
+	top:13px;
+	.number-badge {
+		padding:2px 5px 2px 10px;
+		cursor:pointer;
+		text-shadow:none;
+		font-weight:bold;
+	}
+}
+
+// PROGRESS PICTURE AND ANIMATION
+// -------------------------------------------------------------------
+
+.progress {
+	position:absolute;
+	z-index:1;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	background:transparent url(../img/transparent.png) center bottom no-repeat;
+	.cloud {
+		background:transparent url(../img/cloud.png) -250px 0 no-repeat;
+		position:relative;
+		z-index:10001;
+		height:195px;
+	}
+	.rain {
+		position:absolute;
+		z-index:10000;
+		top:0;
+		left:50%;
+		margin-left:-64px;
+		width:128px;
+		height:100vh;
+		background:transparent url(../img/rain.png) 0 -337px no-repeat;
+	}
+}
+
+// EDUCATION
+// -------------------------------------------------------------------
+
+.education {
+	position:absolute;
+	top:0;
+	height:100vh;
+	left:0;
+	width:100vw;
+	z-index:10001;
+	background-color:rgba(0,0,0,0.5);
+	.carousel {
+		width:100vw;
+		height:80vh;
+		overflow:hidden;
+		margin:0;
+		padding:0;
+		.close,
+		.navigate {
+			.ui-btn {
+				width:22px;
+				display:inline-block;
+				background-color:transparent;
+				border:0;
+				margin-left:~"calc(90vw - 11px)";
+				position:absolute;
+				padding-left:0;
+				&:after {
+					left:0;
+					background-color:#000;
+				}
+			}
+		}
+		.navigate {
+			width:10vw;
+			top:40vh;
+			position:absolute;
+			&.left {
+				margin-left:0;
+				a {
+					margin-left:10vw;
+				}
+			}
+			&.right {
+				a {
+					margin-left:~"calc(90vw - 22px)";
+				}
+			}
+		}
+		.content {
+			display:inline-block;
+			padding:0;
+			margin-left:10vw;
+			background-color:@clr-lightgrey;
+			height:70vh;
+			width:80vw;
+			overflow:hidden;
+			.slides {
+				margin:@dim-margin 0;
+				padding:0;
+				width:100000px;
+				.slide {
+					list-style-type:none;
+					padding:0;
+					margin:0;
+					width:70vw;
+					margin-left:5vw;
+					margin-right:25vw;
+					display:inline-block;
+					h1 {
+						color:@clr-blue;
+						text-shadow:none;
+					}
+					img {
+						max-width:100%;
+					}
+				}
+			}
+		}
+	}
+	.progress {
+		top:auto;
+		bottom:0;
+		left:0;
+		height:10vh;
+		text-align:center;
+		font-size:40px;
+		text-shadow:none;
+		color:@clr-white;
+	}
+}
+
+// AVATAR AND AVATAR LISTS
+// -------------------------------------------------------------------
+.avatar img {
+	width:@dim-avatar-small;
+	height:@dim-avatar-small;
+	border-radius:(@dim-avatar-small / 2);
+	box-shadow:@shd-avatar;
+}
+.avatar-small {
+	width:@dim-avatar-small / 2;
+	height:@dim-avatar-small / 2;
+	border-radius:(@dim-avatar-small / 3);
+	box-shadow:@shd-avatar;
+	vertical-align:middle;
+	margin-right:1em;
+}
+.avatar-list {
+	.avatar-container {
+		display:inline-block;
+		float:left;
+		img {
+			width:@dim-avatar-small;
+			height:@dim-avatar-small;
+			border-radius:@dim-avatar-small / 2;
+		}
+	}
+	.name-container {
+		line-height:@dim-avatar-small / 2;
+		.name,
+		.department {
+			line-height:@dim-avatar-small / 2;
+			margin:0;
+			margin-left:@dim-margin;
+			display:inline-block;
+			float:left;
+		}
+		.department {
+			font-weight:normal;
+		}
+		.points {
+			display:none;
+		}
+	}
+}
+
+
+// LOGIN PAGE
+// -------------------------------------------------------------------
+
+#login {
+}
+
+// HOME PAGE
+// -------------------------------------------------------------------
+
+#home {
+	.avatar {
+		text-align:center;
+	}
+	a {
+		text-align:center;
+	}
+	h1 {
+		text-align:center;
+	}
+}
+
+// APPS PAGE
+// -------------------------------------------------------------------
+
+#apps,
+#vr {
+	.app {
+		border: 1px solid #ddd;
+    	border-radius: 6px;
+    	padding: 1em;
+    	background-color: #eee;
+		margin-bottom:2em;
+		.name {
+			display:block;
+		}
+		.details{
+			display:block;
+			&>div {
+				display:inline-block;
+			}
+			.status {
+				margin-right:2em;
+				input {
+					margin-right:2em;
+				}
+			}
+			.icon {
+				margin-right:5px;
+				img {
+					width:40px;
+					height:40px;
+					vertical-align:middle;
+				}
+			}
+			.store {
+				display:inline-block;
+				float:right;
+				a {
+					display:block;
+					position:relative;
+					width:150px;
+					height:51px;
+					background:transparent url(/img/stores.png) bottom left no-repeat;
+					&.android {
+						background-position:left top;
+					}
+				}
+			}
+		}
+	}
+}
+
+// PROGRAM PAGE
+// -------------------------------------------------------------------
+
+#program {
+	#program-content {
+  		overflow: scroll !important;
+  		#program-table {
+  			width:~"calc(100vw - 32px)";
+  			.controls {
+  				label {
+  					cursor:pointer;
+  				}
+  				label.theme-1 {
+  					color:#E3AD00;
+  				}
+  				label.theme-2 {
+  					color:#5181C2;
+  				}
+  				label.theme-3 {
+  					color:#61A493;
+  				}
+  				label.theme-4 {
+  					color:#BE0079;
+  				}
+  			}
+	  		tr {
+	  			vertical-align:top;
+	  		}
+  		}
+  		.program {
+  			.controls {
+  				margin-bottom:5px;
+  				&>div {
+  					display:inline-block;
+  				}
+  				.like {
+  					float:right;
+  				}
+  				span {
+				    width: 21px;
+				    height: 18px;
+				    border: 1px solid #aaa;
+				    border-radius: 3px;
+				    background-color: #ccc;
+				    text-align: center;
+				    padding-top: 3px;
+				    color:#666;
+  				}
+  			}
+  			.row {
+  				vertical-align:top;
+  				width:116em;
+  				.timeslot,
+  				.session {
+  					background-color:@clr-darkgrey;
+  					border:1px solid @clr-lightgrey;
+  					color:@clr-white;
+  					text-shadow:none;
+  					position:relative;
+  					top:0;
+  					display:inline-block;
+  					vertical-align:top;
+  				}
+  				.timeslot {
+  					background-color:#6B6D72;
+  					width:3em;
+  					height:10em;
+  					font-size:80%;
+  					padding:@dim-margin / 2;
+  				}
+  				.session {
+  					&>div {
+  						position:relative;
+  						height:10em;
+  						width:12em;
+	  					padding:@dim-margin / 2;
+	  					font-size:80%;
+		  				&.active {
+		  					background-color:darken(@clr-darkgrey,20%);
+		  				}
+	  					&>.speakers {
+	  						position:absolute;
+	  						bottom:0;
+	  						font-size:80%;
+	  						margin-bottom:@dim-margin / 3;
+	  					}
+  					}
+  					.theme-1 {
+  						background-color:#E3AD00;
+  						&.active {
+  							background-color:darken(#E3AD00,20%);
+  						}
+  					}
+  					.theme-2 {
+  						background-color:#5181C2;
+  						&.active {
+  							background-color:darken(#5181C2,20%);
+  						}
+  					}
+  					.theme-3 {
+  						background-color:#61A493;
+  						&.active {
+  							background-color:darken(#61A493,20%);
+  						}
+  					}
+  					.theme-4 {
+  						background-color:#BE0079;
+  						&.active {
+  							background-color:darken(#BE0079,20%);
+  						}
+  					}
+  					.details {
+  						position:absolute;
+  						z-index:10000;
+  						top:0;
+  						left:0;
+  						width:60vw;
+  						padding:@dim-margin / 2;
+  						background-color:@clr-black;
+  						.room {
+  							span {
+	  							top:-5px;
+	  							float:right;
+	  						}
+  						}
+  						.room,
+  						.levels,
+  						.themes {
+  							font-size:80%;
+  							clear:both;
+  						}
+  						.room {
+  							span {
+							    width: 21px;
+							    height: 17px;
+							    border: 1px solid #ccc;
+							    border-radius: 3px;
+							    background-color: #888;
+							    text-align: center;
+							    padding-top: 4px;
+						    }
+  						}
+  						&>.speakers {
+  							.speaker {
+  								clear:both;
+  								margin-bottom:11px;
+  							}
+  							.avatar {
+  								float:left;
+  								margin-right:11px;
+  								img {
+  									width:60px;
+  									height:60px;
+  									border-radius:30px;
+  								}
+  							}
+  							.name {
+  								font-weight:bold;
+  							}
+  							.position {
+  								font-style:italic;
+  							}
+  						}
+  					}
+  				}
+  			}
+  		}
+	}
+}
+
+// CONTACTS PAGE
+// -------------------------------------------------------------------
+
+#contacts-list {
+	tr {
+		background-color:rgba(255,255,255,0.5);
+		border:1px solid @clr-darkgrey;
+		border-radius:@dim-radius;
+		td {
+			img {
+				width:60px;
+				height:60px;
+				border-radius:30px;
+				vertical-align:middle;
+			}
+		}
+	}
+}
+
+// DISCOVERY GAME
+// -------------------------------------------------------------------
+
+#discovery-game {
+	.discovery-column {
+		display:inline-block;
+		width:40%;
+		margin:10px 5%;
+		padding:0;
+	}
+	.partner {
+		display:inline-block;
+		width:100%;
+		height: 3em;
+		padding:2px 5px;
+		margin:6px 0;
+		border-radius:4px;
+		border:1px solid transparent;
+		box-shadow:0 0 4px transparent;
+		vertical-align:middle;
+	}
+	.text {
+		display:inline-block;
+		width:100%;
+		height: 3em;
+		padding:2px 5px;
+		margin:6px 0;
+		border-radius:4px;
+		border:1px solid #888;
+		background-color:#eee;
+		box-shadow:0 0 4px rgba(0,0,0,0.5);
+		cursor:pointer;
+		vertical-align:middle;
+	}
+	.ui-sortable-helper {
+		box-shadow:0 0 8px rgba(0,0,0,0.5);
+	}
+}
+
+// NOTIFICATION PAGE
+// -------------------------------------------------------------------
+
+#notify {
+	#notification-content {
+		.notification {
+			position:relative;
+			left:0;
+		}
+		.ui-block-a,
+		.ui-block-c {
+			width:1.75em;
+			[class*=ui-block-]>.ui-btn {
+				margin:0;
+			}
+		}
+		.ui-block-b {
+			width:~"calc(100% - 3.5em)";
+			position:relative;
+			padding:0 1em;
+			.datetime {
+				font-weight:normal;
+				font-size:80%;
+				img {
+					display:none;
+				}
+			}
+		}
+	}
+}
+
+// PROFILE PAGE
+// -------------------------------------------------------------------
+
+#profile {
+	#profile-email {
+		text-align:center;
+	}
+	#photo {
+		display:table-row;
+		vertical-align:middle;
+		&> div
+		 {
+			display:block;
+			padding-left:90px;
+			&:first-child {
+				display:inline-block;
+				padding-left:0;
+				float:left;
+			}
+		}
+	}
+	#profile-form-logout {
+		margin-top:2 * @dim-margin;
+	}
+}
