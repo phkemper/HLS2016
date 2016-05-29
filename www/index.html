@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">	
+		<meta name="viewport" content="minimal-ui,initial-scale=1, user-scalable=no, maximum-scale=1.0, width=device-width">
+	   	<meta name="apple-mobile-web-app-capable" content="yes" />
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="robots" content="noindex,nofollow">
+		<title>Healthcare Learning Summit 2016</title>
+		<link rel="apple-touch-icon-precomposed" href="./img/apple-touch-icon-precomposed.png"><!-- 57×57px -->
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="./img/apple-touch-icon-72x72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="./img/apple-touch-icon-76x76-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="./img/apple-touch-icon-114x114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="./img/apple-touch-icon-120x120-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="./img/apple-touch-icon-144x144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="./img/apple-touch-icon-152x152-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="180x180" href="./img/apple-touch-icon-180x180-precomposed.png">
+		<link rel="icon" sizes="192x192" href="./img/touch-icon-192x192.png">
+		<link rel="stylesheet" type="text/css" href="css/brainwave/brainwave.css" />
+		<link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4/jquery-ui.min.css" />
+  		<link rel="stylesheet" type="text/css" href="css/brainwave/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" type="text/css" href="js/jquery-mobile/jquery.mobile.structure-1.4.5.min.css">
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.6.2/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+	<body id="index">
+		<!-- -------------------------------------------------------------------------------------------------------------------------
+		HEADER
+		-------------------------------------------------------------------------------------------------------------------------- -->
+		<div id="header" data-id="header" data-role="header" data-position="fixed" class="header ui-grid-c" data-theme="b">
+			<div data-role="navbar" data-grid="b">
+				<ul>
+					<li><button id="header-home" href="#home" data-icon="home">home</button></li>
+					<!-- li><button href="#leaderboard" data-icon="star"></button><div id="header-points"></div></li -->
+					<li><button href="#notify" data-icon="comment"></button><div id="header-notifications"></div></li>
+					<li><button id="header-profile" href="#profile" data-icon="gear">profile</button></li>
+				</ul>
+			</div>
+		</div>
+		<!-- -------------------------------------------------------------------------------------------------------------------------
+		HOME PAGE
+		-------------------------------------------------------------------------------------------------------------------------- -->
+		<div id="home" data-role="page">
+			<div id="home-content" class="ui-content" data-role="content">
+				<h1 id="home-title"></h1>
+				<p><a data-role="button" data-icon="shop" data-iconpos="right" data-theme="b" href="#apps" id="home-button-apps">apps you should install</a></p>
+				<p><a data-role="button" data-icon="calendar" data-iconpos="right" data-theme="b" href="#program" id="home-button-program">sessions</a></p>
+				<p><a data-role="button" data-icon="eye" data-iconpos="right" data-theme="b" href="#vr" id="home-button-vr">virtual reality</a></p>
+				<p><a data-role="button" data-icon="location" data-iconpos="right" data-theme="b" href="#map" id="home-button-map">map</a></p>
+				<p><a data-role="button" data-icon="star" data-iconpos="right" data-theme="b" href="#games" id="home-button-games">games</a></p>
+				<p><a data-role="button" data-icon="alert" data-iconpos="right" data-theme="b" href="#sins" id="home-button-sins">7 cardinal sins</a></p>
+				<p><a data-role="button" data-icon="info" data-iconpos="right" data-theme="b" href="#info" id="home-button-info">info</a></p>
+				<p><a data-role="button" data-icon="grid" data-iconpos="right" data-theme="b" href="#discovery" id="home-button-discovery">discovery game</a></p>
+				<p><a style="display:none;" class="employee speaker" data-role="button" data-icon="phone" data-iconpos="right" data-theme="b" href="#contacts" id="home-button-contacts">contacts</a></p>
+			</div>
+		</div>
+		<!-- -------------------------------------------------------------------------------------------------------------------------
+		LOGIN PAGE
+		-------------------------------------------------------------------------------------------------------------------------- -->
+		<div id="login" data-role="page">
+			<div id="login-content" class="ui-content" data-role="content">
+				<div id="login-form" class="form" data-action="/login/login">
+					<div class="form-header">
+						<h1 id="login-form-header">Please log in</h1>
+						<p id="login-form-header-text">What is your email address</p>
+					</div>
+					<div>
+						<select id="login-form-lang" name="lang">
+							<option value="--" id="login-form-lang-default">Choose your language</option>
+							<option value="nl">Nederlands</option>
+							<option value="en">English</option>
+						</select>
+					</div>
+					<div>
+						<input type="email" name="userid" id="login-form-userid" placeholder="me@example.com"/>
+					</div>
+					<div>
+						<a data-role="button" class="button" id="login-form-submit">Start the app</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- -------------------------------------------------------------------------------------------------------------------------
+		APPS
+		-------------------------------------------------------------------------------------------------------------------------- -->
+		<div id="apps" data-role="page">
+			<div id="apps-content" class="ui-content" data-role="content">
+				<h1 id="apps-title">Apps you should install</h1>
+				<div id="apps-explain"></div>
+				<div id="apps-list"></div>
+			</div>
+		</div>
+		<!-- -------------------------------------------------------------------------------------------------------------------------
+		PROGRAM
+		-------------------------------------------------------------------------------------------------------------------------- -->
+		<div id="program" data-role="page">
+			<div id="program-content" class="ui-content" data-role="content">
+				<h1 id="program-title">Sessions</h1>
+				<div id="program-table" style="overflow:scroll;-webkit-overflow-scrolling:touch;">
+				</div>
+			</div>
+		</div>
+		<!-- -------------------------------------------------------------------------------------------------------------------------
+		VIRTUAL REALITY
+		-------------------------------------------------------------------------------------------------------------------------- -->
+		<div id="vr" data-role="page">
+			<div id="vr-content" class="ui-content" data-role="content">
+				<h1 id="vr-title-vr">Virtual reality</h1>
+				<div id="vr-explain-vr"></div>
+				<div id="vr-list-vr"></div>
+				<h1 id="vr-title-ar">Augmented reality</h1>
+				<div id="vr-explain-ar"></div>
+				<div id="vr-list-ar"></div>
+			</div>
+		</div>
+		<!-- -------------------------------------------------------------------------------------------------------------------------
+		MAP
+		-------------------------------------------------------------------------------------------------------------------------- -->
+		<div id="map" data-role="page">
+			<div id="map-content" class="ui-content" data-role="content">
+				<h1 id="map-title">Map</h1>
+				<div data-role="collapsibleset" data-theme="b" data-content-theme="b">
+				    <div data-role="collapsible" id="map-mediaplaza">
+				        <h3>Media Plaza</h3>
+					    <div>
+							<img src="./img/mediaplaza.png" style="width:100%;height:auto;"/>
+						</div>
+				    </div>
+				    <div data-role="collapsible" id="map-parking">
+				        <h3><span class="fa fa-product-hunt"></span> P3 &amp; P1</h3>
+					    <div>
+							<img src="./img/parking.png" style="width:100%;height:auto;"/>
+						</div>
+					</div>
+				    <div data-role="collapsible" id="map-train">
+				        <h3><span class="fa fa-train"></span></h3>
+					    <div id="map-train-content"></div>
+				    </div>
+				    <div data-role="collapsible" id="map-car">
+				        <h3><span class="fa fa-car"></span></h3>
+					    <div id="map-car-content"></div>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<!-- -------------------------------------------------------------------------------------------------------------------------
+		GAMES
+		-------------------------------------------------------------------------------------------------------------------------- -->
+		<div id="games" data-role="page">
+			<div id="games-content" class="ui-content" data-role="content">
+				<h1 id="games-title">Games</h1>
+				<div id="games-explain"></div>
+			</div>
+		</div>
+		<!-- -------------------------------------------------------------------------------------------------------------------------
+		7SINS
+		-------------------------------------------------------------------------------------------------------------------------- -->
+		<div id="sins" data-role="page">
+			<div id="sins-content" class="ui-content" data-role="content">
+				<h1 id="sins-title">7 Cardinal sins</h1>
+				<div id="sins-explain"></div>
+			</div>
+		</div>
+		<!-- -------------------------------------------------------------------------------------------------------------------------
+		INFO
+		-------------------------------------------------------------------------------------------------------------------------- -->
+		<div id="info" data-role="page">
+			<div id="info-content" class="ui-content" data-role="content">
+				<h1 id="info-title">Information</h1>
+				<div id="info-explain"></div>
+			</div>
+		</div>
+		<!-- -------------------------------------------------------------------------------------------------------------------------
+		CONTACTS
+		-------------------------------------------------------------------------------------------------------------------------- -->
+		<div id="contacts" data-role="page">
+			<div id="contacts-content" class="ui-content" data-role="content">
+				<h1 id="contacts-title">Contacts</h1>
+				<div id="contacts-list"></div>
+			</div>
+		</div>
+		<!-- -------------------------------------------------------------------------------------------------------------------------
+		DISCOVERY GAME
+		-------------------------------------------------------------------------------------------------------------------------- -->
+		<div id="discovery" data-role="page">
+			<div id="discovery-content" class="ui-content" data-role="content">
+				<h1 id="discovery-title">Discovery game</h1>
+				<p id="discovery-explain">Find our partners and match the right words with the right partner.</p>
+				<div id="discovery-game"></div>
+				<a data-role="button" class="button" data-theme="b" id="discovery-submit">Submit</a>
+			</div>
+		</div>
+		<!-- -------------------------------------------------------------------------------------------------------------------------
+		NOTIFY
+		-------------------------------------------------------------------------------------------------------------------------- -->
+		<div id="notify" data-role="page">
+			<div id="notifications-content" class="ui-content" data-role="content">
+				<h1 id="notifications-title">Notifications</h1>
+				<div id="notification-content"></div>
+				<div id="notification-assignment"></div>
+			</div>
+		</div>
+		<!-- -------------------------------------------------------------------------------------------------------------------------
+		PROFILE
+		-------------------------------------------------------------------------------------------------------------------------- -->
+		<div id="profile" data-role="page">
+			<div id="profile-content" class="ui-content" data-role="content">
+				<h1 id="profile-title">Your profile</h1>
+				<p id="profile-email"><p>
+				<div id="profile-form">
+					<div>
+						<select id="profile-form-lang" name="lang" data-theme="b">
+							<option value="--" id="profile-form-lang-default">Choose your language</option>
+							<option value="nl">Nederlands</option>
+							<option value="en">English</option>
+						</select>
+					</div>
+					<a data-role="button" data-icon="eye" data-iconpos="right" data-theme="b" href="javascript:void(0);" id="profile-button-education">View training again</a>
+					<div>
+						<a data-role="button" class="button" id="profile-form-logout" data-icon="power" data-iconpos="right" data-theme="b">Logout</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- -------------------------------------------------------------------------------------------------------------------------
+		ERROR DIALOG
+		-------------------------------------------------------------------------------------------------------------------------- -->
+		<div class="background" id="dialog-error" style="display:none;">
+			<input type="hidden" id="dialog-error-next-page" value=""/>
+			<div class="dialog dialog-error">
+				<div class="dialog-header" id="dialog-error-header">
+				Error
+				</div>
+				<div class="dialog-message" id="dialog-error-message">
+				The message
+				</div>
+				<a data-role="button" class="button dialog-close" id="dialog-error-submit">Close</a>
+			</div>
+		</div>
+		<!-- -------------------------------------------------------------------------------------------------------------------------
+		MESSAGE DIALOG
+		-------------------------------------------------------------------------------------------------------------------------- -->
+		<div class="background" id="dialog-message" style="display:none;">
+			<input type="hidden" id="dialog-message-next-page" value=""/>
+			<div class="dialog dialog-message">
+				<div class="dialog-header" id="dialog-message-header">
+				Message
+				</div>
+				<div class="dialog-message" id="dialog-message-message">
+				The message
+				</div>
+				<a data-role="button" class="button dialog-message-close" id="dialog-message-submit">Close</a>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+		<script type="text/javascript" src="js/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
