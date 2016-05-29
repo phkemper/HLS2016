@@ -16,6 +16,31 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+
+    <icon src="img/apple-touch-icon-180x180-precomposed.png" platform="ios" width="180" height="180" />
+	<!-- iPhone / iPod Touch  -->
+	<icon src="img/apple-touch-icon-72x72-precomposed.png" platform="ios" width="60" height="60" />
+	<icon src="img/apple-touch-icon-120x120-precomposed.png" platform="ios" width="120" height="120" />
+
+	<!-- iPad -->
+	<icon src="img/apple-touch-icon-76x76-precomposed.png" platform="ios" width="76" height="76" />
+	<icon src="img/apple-touch-icon-152x152-precomposed.png" platform="ios" width="152" height="152" />
+
+	<!-- Settings Icon -->
+	<icon src="img/apple-touch-icon-72x72-precomposed.png" platform="ios" width="29" height="29" />
+	<icon src="img/apple-touch-icon-72x72-precomposed.png" platform="ios" width="58" height="58" />
+
+	<!-- Spotlight Icon -->
+	<icon src="img/apple-touch-icon-72x72-precomposed.png" platform="ios" width="40" height="40" />
+	<icon src="img/apple-touch-icon-76x76-precomposed.png" platform="ios" width="80" height="80" />
+	
+	<icon src="img/apple-touch-icon-180x180-precomposed.png" platform="android" qualifier="ldpi" />
+	<icon src="img/apple-touch-icon-180x180-precomposed.png" platform="android" qualifier="mdpi" />
+	<icon src="img/apple-touch-icon-180x180-precomposed.png" platform="android" qualifier="hdpi" />
+	<icon src="img/apple-touch-icon-180x180-precomposed.png" platform="android" qualifier="xhdpi" />
+	<icon src="img/apple-touch-icon-180x180-precomposed.png" platform="android" qualifier="xxhdpi" />
+	<icon src="img/apple-touch-icon-180x180-precomposed.png" platform="android" qualifier="fr-xxhdpi" />
+
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
